@@ -1,9 +1,17 @@
-import { foreignKey, pgTable, text, timestamp, uniqueIndex, varchar } from "drizzle-orm/pg-core";
+import {
+  foreignKey,
+  pgTable,
+  text,
+  timestamp,
+  uniqueIndex,
+  uuid,
+  varchar,
+} from "drizzle-orm/pg-core";
 
 export const Account = pgTable(
   "Account",
   {
-    id: text("id").primaryKey().notNull(),
+    id: uuid("id").defaultRandom().primaryKey(),
     userId: varchar("userId").notNull(),
     type: varchar("type").notNull(),
     provider: varchar("provider").notNull(),
@@ -34,7 +42,7 @@ export const Account = pgTable(
 export const Session = pgTable(
   "Session",
   {
-    id: text("id").primaryKey().notNull(),
+    id: uuid("id").defaultRandom().primaryKey(),
     sessionToken: varchar("sessionToken").notNull(),
     userId: varchar("userId").notNull(),
     expires: timestamp("expires").notNull(),
@@ -53,7 +61,7 @@ export const Session = pgTable(
 export const User = pgTable(
   "User",
   {
-    id: text("id").primaryKey().notNull(),
+    id: uuid("id").defaultRandom().primaryKey(),
     name: varchar("name"),
     email: varchar("email"),
     emailVerified: timestamp("emailVerified"),

@@ -1,5 +1,5 @@
 import { NodePgDatabase } from "drizzle-orm/node-postgres";
-import { User, Account, Session, VerificationToken } from "../drizzle/schema";
+import { User, Account, Session, VerificationToken } from "./schema";
 import { InferModel } from "drizzle-orm";
 import { eq } from "drizzle-orm/expressions";
 
@@ -11,7 +11,11 @@ export type TVerificationToken = InferModel<typeof VerificationToken, "insert">;
 export function DrizzleAdapter(db: NodePgDatabase) {
   return {
     async createUser(user: TUser) {
-      const insertedUsers = await db.insert(User).values(user).returning();
+      const insertedUsers = await db
+        .insert(User)
+        .values({ ...user })
+        .returning();
+
       return insertedUsers[0];
     },
 
