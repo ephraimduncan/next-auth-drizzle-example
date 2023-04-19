@@ -1,0 +1,6 @@
+ALTER TABLE "Account" ALTER COLUMN "id" SET DATA TYPE uuid;
+ALTER TABLE "Account" ALTER COLUMN "id" SET DEFAULT gen_random_uuid();
+ALTER TABLE "Session" ALTER COLUMN "id" SET DATA TYPE uuid;
+ALTER TABLE "Session" ALTER COLUMN "id" SET DEFAULT gen_random_uuid();
+ALTER TABLE "User" ALTER COLUMN "id" SET DATA TYPE uuid;
+ALTER TABLE "User" ALTER COLUMN "id" SET DEFAULT gen_random_uuid();
