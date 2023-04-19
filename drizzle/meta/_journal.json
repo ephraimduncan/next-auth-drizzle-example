@@ -5,15 +5,8 @@
     {
       "idx": 0,
       "version": "5",
-      "when": 1681898852094,
-      "tag": "0000_busy_shinobi_shaw",
-      "breakpoints": false
-    },
-    {
-      "idx": 1,
-      "version": "5",
-      "when": 1681898936799,
-      "tag": "0001_quick_mindworm",
+      "when": 1681905590097,
+      "tag": "0000_common_blindfold",
       "breakpoints": false
     }
   ]

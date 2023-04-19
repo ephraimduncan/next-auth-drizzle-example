@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS "Account" (
-	"id" serial PRIMARY KEY NOT NULL,
+	"id" text PRIMARY KEY NOT NULL,
 	"userId" varchar NOT NULL,
 	"type" varchar NOT NULL,
 	"provider" varchar NOT NULL,
@@ -14,14 +14,14 @@ CREATE TABLE IF NOT EXISTS "Account" (
 );
 
 CREATE TABLE IF NOT EXISTS "Session" (
-	"id" serial PRIMARY KEY NOT NULL,
+	"id" text PRIMARY KEY NOT NULL,
 	"sessionToken" varchar NOT NULL,
 	"userId" varchar NOT NULL,
 	"expires" timestamp NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS "User" (
-	"id" serial PRIMARY KEY NOT NULL,
+	"id" text PRIMARY KEY NOT NULL,
 	"name" varchar,
 	"email" varchar,
 	"emailVerified" timestamp,
