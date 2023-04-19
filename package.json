@@ -18,15 +18,19 @@
     "Lluis Agusti <hi@llu.lu>"
   ],
   "dependencies": {
+    "drizzle-orm": "^0.24.2",
     "next": "latest",
     "next-auth": "latest",
     "nodemailer": "^6",
+    "pg": "^8.10.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/node": "^17",
+    "@types/pg": "^8.6.6",
     "@types/react": "^18.0.15",
+    "drizzle-kit": "^0.17.5",
     "typescript": "^4"
   }
 }
