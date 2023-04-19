@@ -1,6 +1,9 @@
 lockfileVersion: '6.0'
 
 dependencies:
+  '@auth/core':
+    specifier: ^0.6.0
+    version: 0.6.0(nodemailer@6.0.0)
   drizzle-orm:
     specifier: ^0.24.2
     version: 0.24.2(@types/pg@8.6.6)(pg@8.10.0)
@@ -8,7 +11,7 @@ dependencies:
     specifier: latest
     version: 13.3.0(react-dom@18.2.0)(react@18.2.0)
   next-auth:
-    specifier: latest
+    specifier: ^4.22.1
     version: 4.22.1(next@13.3.0)(nodemailer@6.0.0)(react-dom@18.2.0)(react@18.2.0)
   nodemailer:
     specifier: ^6
@@ -41,6 +44,23 @@ devDependencies:
     version: 4.0.2
 
 packages:
+
+  /@auth/core@0.6.0(nodemailer@6.0.0):
+    resolution: {integrity: sha512-gDozJUWQvmoGcPILt91flrIGkp8JFobZkzg4BpAKwWLSZnGROhfbd+a1DUgp5Yczm73gjmONXk5oTqlBL7yUaA==}
+    peerDependencies:
+      nodemailer: ^6.8.0
+    peerDependenciesMeta:
+      nodemailer:
+        optional: true
+    dependencies:
+      '@panva/hkdf': 1.0.4
+      cookie: 0.5.0
+      jose: 4.14.0
+      nodemailer: 6.0.0
+      oauth4webapi: 2.2.1
+      preact: 10.11.3
+      preact-render-to-string: 5.2.3(preact@10.11.3)
+    dev: false
 
   /@babel/runtime@7.21.0:
     resolution: {integrity: sha512-xwII0//EObnq89Ji5AKYQaRYiW/nZ3llSv29d49IuxPhKbtJoLP+9QUUZ4nVragQVtaVGeZrpB+ZtG/Pdy/POw==}
@@ -821,6 +841,10 @@ packages:
     engines: {node: '>=6.0.0'}
     dev: false
 
+  /oauth4webapi@2.2.1:
+    resolution: {integrity: sha512-VDQVDa0Fw/xvUbB9eA8c3MnJU7BM47TL4Y6F/qQvt+qxLRvEvYZ4KibGfceL7QzxaNtC2XdyN/hVL+Ap+G9CMA==}
+    dev: false
+
   /oauth@0.9.15:
     resolution: {integrity: sha512-a5ERWK1kh38ExDEfoO6qUHJb32rd7aYmPHuyCu3Fta/cnICvYmgd2uhuKXvPD+PXB+gCEYYEaQdIRAjCOwAKNA==}
     dev: false
@@ -938,6 +962,15 @@ packages:
     dependencies:
       xtend: 4.0.2
 
+  /preact-render-to-string@5.2.3(preact@10.11.3):
+    resolution: {integrity: sha512-aPDxUn5o3GhWdtJtW0svRC2SS/l8D9MAgo2+AWml+BhDImb27ALf04Q2d+AHqUUOc6RdSXFIBVa2gxzgMKgtZA==}
+    peerDependencies:
+      preact: '>=10'
+    dependencies:
+      preact: 10.11.3
+      pretty-format: 3.8.0
+    dev: false
+
   /preact-render-to-string@5.2.6(preact@10.13.2):
     resolution: {integrity: sha512-JyhErpYOvBV1hEPwIxc/fHWXPfnEGdRKxc8gFdAZ7XV4tlzyzG847XAyEZqoDnynP88akM4eaHcSOzNcLWFguw==}
     peerDependencies:
@@ -945,6 +978,10 @@ packages:
     dependencies:
       preact: 10.13.2
       pretty-format: 3.8.0
+    dev: false
+
+  /preact@10.11.3:
+    resolution: {integrity: sha512-eY93IVpod/zG3uMF22Unl8h9KkrcKIRs2EGar8hwLZZDU1lkjph303V9HZBwufh2s736U6VXuhD109LYqPoffg==}
     dev: false
 
   /preact@10.13.2:
